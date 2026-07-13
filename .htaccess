@@ -1,0 +1,7 @@
+# Teruskan semua permintaan ke folder public/.
+# Berguna saat document root tidak bisa diarahkan langsung ke public
+# (umum pada shared hosting / cPanel).
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
